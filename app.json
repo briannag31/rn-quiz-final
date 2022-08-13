@@ -2,6 +2,7 @@
   "expo": {
     "name": "quiz6",
     "slug": "quiz6",
+    "owner": "briannag31",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
