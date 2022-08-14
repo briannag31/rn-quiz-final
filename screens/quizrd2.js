@@ -89,10 +89,10 @@ export default Quiz2 = ({navigation}) => {
                     <Text style={styles.buttonText}>Skip!</Text>
                 </TouchableOpacity>}
 
-                {question===9 && score >70 && <TouchableOpacity style={styles.button} onPress={navigation.navigate("Win")}>
+                {question===9 && score >10 && <TouchableOpacity style={styles.button} onPress={navigation.navigate("Win")}>
                     <Text style={styles.buttonText}>Show my results!</Text>
                 </TouchableOpacity>}
-                {question===9 && score <70 && <TouchableOpacity style={styles.button} onPress={handleResultsLose}>
+                {question===9 && score <10 && <TouchableOpacity style={styles.button} onPress={handleResultsLose}>
                     <Text style={styles.buttonText}>Show my results!</Text>
                 </TouchableOpacity>}
 
