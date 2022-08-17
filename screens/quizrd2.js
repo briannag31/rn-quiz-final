@@ -48,17 +48,12 @@ export default Quiz2 = ({navigation}) => {
         if(question!==9){
             setQuestion(question +1)
             setOptions(shuffleOptions(questions[question +1]))
-        }}
-    //     if(question === 9){
-    //         handleResultsWin()
-    //         // handleResultsLose()
-    //     }
-    //     }
-    //     const handleResultsWin = () =>{
-    //         navigation.navigate("Win", {
-    //             score: score
-    //         })}
-        const handleResultsLose = () =>{
+        }
+        if(question === 9){
+            handleResults()
+        }
+        }
+        const handleResults = () =>{
             navigation.navigate("Results2", {
                 score: score
             })
@@ -88,14 +83,9 @@ export default Quiz2 = ({navigation}) => {
                 {question !== 9 && <TouchableOpacity style={styles.button} onPress={handleNext}>
                     <Text style={styles.buttonText}>Skip!</Text>
                 </TouchableOpacity>}
-
-                {question===9 && score >10 && <TouchableOpacity style={styles.button} onPress={navigation.navigate("Win")}>
+                {question===9 &&<TouchableOpacity style={styles.button} onPress={handleResults}>
                     <Text style={styles.buttonText}>Show my results!</Text>
                 </TouchableOpacity>}
-                {question===9 && score <10 && <TouchableOpacity style={styles.button} onPress={handleResultsLose}>
-                    <Text style={styles.buttonText}>Show my results!</Text>
-                </TouchableOpacity>}
-
             </View>
             </View>
             )}

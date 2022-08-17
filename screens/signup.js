@@ -75,7 +75,7 @@ const SignUp = (props) => {
     }
 
     const goTOQuiz = () => {
-        isFormValid ? props.navigation.navigate('Quiz') : null
+        isFormValid ? props.navigation.navigate('Rules') : null
     }
 
 
@@ -111,7 +111,7 @@ const SignUp = (props) => {
                         </View>
                         <View>
                             <TouchableOpacity style={styles.button} onPress={goTOQuiz}> 
-                            <Text style={styles.buttonText}> Start Round 1!</Text>
+                            <Text style={styles.buttonText}> Start!</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

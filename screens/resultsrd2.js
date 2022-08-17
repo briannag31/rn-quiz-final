@@ -5,8 +5,18 @@ const Results2 = ({navigation, route}) => {
     const {score, question, questions} = route.params
 
    return (
-    <View style={styles.container}>
-         <ImageBackground source={{ uri: "https://i.imgur.com/lX6x82m.png" }} style={styles.image}
+    <View>
+        {score >10 && <View style={styles.container}>       
+        <ImageBackground source={{ uri: "https://i.imgur.com/76j7fe2.png" }} style={styles.imageWin}
+        resizeMode="cover">
+        <TouchableOpacity onPress={() => navigation.navigate("Home")} style={styles.buttonWin}>
+            <Text style={styles.buttonText}>Home</Text>
+        </TouchableOpacity>
+            </ImageBackground>
+    </View>}
+        
+   {score < 10 &&  <View style={styles.container}>
+        <ImageBackground source={{ uri: "https://i.imgur.com/lX6x82m.png" }} style={styles.image}
         resizeMode="cover">
             <Text style={styles.scoreVal}>{score}/100 </Text>
             </ImageBackground>
@@ -16,6 +26,7 @@ const Results2 = ({navigation, route}) => {
                 <Text style={styles.buttonText}>Home</Text>
             </TouchableOpacity>
         </View>
+    </View>}
     </View>
     )
 }
@@ -27,7 +38,12 @@ const styles = StyleSheet.create({
     container:{
         height: "100%",
         paddingTop: 50,
-        paddingHorizontal: 40,
+        // paddingHorizontal: 40,
+        backgroundColor: "#355070"
+    },
+    containerWin:{
+        height: "100%",
+        paddingTop: 50,
         backgroundColor: "#355070"
     },
     image: {
@@ -36,6 +52,12 @@ const styles = StyleSheet.create({
         width: 500,
 		height: 500,
       },
+      imageWin: {
+        justifyContent: 'center',
+        alignItems: "center",
+        width: 400,
+		height: 800,
+      },
       button:{
         backgroundColor: "#EAAC8B",
         padding: 12,
@@ -43,6 +65,15 @@ const styles = StyleSheet.create({
         borderRadius: 16,
         alignItems: 'center',
         marginBottom: 30,
+      },
+      buttonWin:{
+        backgroundColor: "#EAAC8B",
+        padding: 12,
+        paddingHorizontal: 16,
+        borderRadius: 16,
+        alignItems: 'center',
+        marginBottom: 0,
+        marginTop: 550,
       },
       buttonText:{
         fontSize: 18,

@@ -11,6 +11,7 @@ import Quiz2 from './screens/quizrd2';
 import Results2 from './screens/resultsrd2';
 import Round2Screen from './screens/rd2img';
 import Win from './screens/win';
+import Rules from './screens/rules';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,8 @@ function App() {
         <Stack.Screen name="Results2" component={Results2} options={{headerShown: false }}  />
         <Stack.Screen name="Round2Screen" component={Round2Screen} options={{headerShown: false }}  />
         <Stack.Screen name="Win" component={Win} options={{headerShown: false }}  />
+        <Stack.Screen name="Rules" component={Rules} options={{headerShown: false }}  />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
