@@ -61,4 +61,5 @@
 ## Future Updates
 - add funtionality for user to create their own trivia questions/decks
 - change AsyncStorage to backend server with firebase
+- figure out why sometimes answer choices show up as undefined, but not other times (could be the DB).
 
